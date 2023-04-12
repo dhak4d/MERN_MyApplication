@@ -39,6 +39,18 @@ app.post("/register", async (req, res) => {
     }
 });
 
+
+app.get("/getAllUser", async(req, res)=>{
+    try{
+      const allUser = await user.find({})
+      res.send({status:"ok", data: allUser})
+      console.log(allUser)
+    }catch(error){
+      console.log(error)
+    }
+  })
+
+
 app.listen(5000, () => {
     console.log("Server Started")
 })
