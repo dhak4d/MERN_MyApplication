@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json()); 
 
 const mongoose = require("mongoose")
-const mongoUrl = "mongodb+srv://mango:mango@cluster0.sz4n2kr.mongodb.net/?retryWrites=true&w=majority"
+const mongoUrl = 
 
 mongoose.connect(mongoUrl, {
     useNewUrlParser: true
