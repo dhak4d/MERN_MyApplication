@@ -9,6 +9,7 @@ app.use(express.json());
 const mongoose = require("mongoose")
 const mongoUrl = 
 
+
 mongoose.connect(mongoUrl, {
     useNewUrlParser: true
 }).then(() => {
@@ -20,6 +21,9 @@ mongoose.connect(mongoUrl, {
 
 require("./contactUs")
 const user = mongoose.model("ContactUs")
+
+require("./aboutMe")
+const about = mongoose.model("AboutMe")
 
 
 app.post("/register", async (req, res) => {
@@ -49,6 +53,29 @@ app.get("/getAllUser", async(req, res)=>{
       console.log(error)
     }
   })
+
+  app.get("/getAboutMe", async(req, res)=>{
+    try{
+      const version = 'latest';
+      const allUser1 = await about.find({version})
+      res.send({status:"ok", data: allUser1})
+      console.log(allUser1)
+    }catch(error){
+      console.log(error)
+    }
+  })
+
+  // app.get("/getAboutMe", async(req, res)=>{
+  //   try{
+  //      const version = 'latest'
+  //      const myData = await about.find({version})
+  //      res.send({data:myData})
+  //     //  res.json(myData)
+  //      console.log(myData)
+  //   }catch(error){
+  //     console.log(error)
+  //   }
+  // })
 
 
 app.listen(5000, () => {

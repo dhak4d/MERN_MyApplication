@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+
 function ContactUs() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -8,7 +9,7 @@ function ContactUs() {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
-  const [messageError, setMessageError] = useState('');
+  // const [messageError, setMessageError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,8 +17,8 @@ function ContactUs() {
     let isValid = true;
 
     // Validate name
-    if (!name.trim()) {
-      setNameError('Please enter your name');
+    if (e.target.name<3) {
+      setNameError('Please enter your valid name');
       isValid = false;
     } else {
       setNameError('');
@@ -40,12 +41,12 @@ function ContactUs() {
     }
 
     // Validate message
-    if (!message.trim()) {
-      setMessageError('Please enter a message');
-      isValid = false;
-    } else {
-      setMessageError('');
-    }
+    // if (!message.trim()) {
+    //   setMessageError('Please enter a message');
+    //   isValid = false;
+    // } else {
+    //   setMessageError('');
+    // }
 
     // Submit the form
     if (isValid) {
@@ -78,44 +79,23 @@ function ContactUs() {
     <>
       <h3 style={{ textAlign: 'center' }}>Contact Us</h3>
       <form className="form" onSubmit={handleSubmit}>
-        <div>
+       
           <label className="form-label">Name:</label>
-          <input
-            type="text"
-            className="form-input"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
+          <input type="text" className="form-input" value={name} onChange={(e) => setName(e.target.value)}/>
           {nameError && <div className="error">{nameError}</div>}
-        </div>
-
-        <div>
+        
           <label className="form-label">Email:</label>
-          <input
-            type="email"
-            className="form-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+          <input type="email" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)}/>
           {emailError && <div className="error">{emailError}</div>}
-        </div>
-
-        <div>
+      
           <label className="form-label">Phone Number: </label>
-          <input
-            type="number"
-            className="form-input"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-          />
+          <input type="number" className="form-input" value={phone} onChange={(e) => setPhone(e.target.value)}/>
           {phoneError && <div className="error">{phoneError}</div>}
-        </div>
-
-        <div className="form-group">
+      
           <label className="form-label">Message:</label>
           <textarea className="form-input" value={message} onChange={(e) => setMessage(e.target.value)}/>
-          {messageError && <div className="error">{messageError}</div>}
-        </div>
+          {/* {messageError && <div className="error">{messageError}</div>} */}
+       
         <button className='submit' type="submit">Submit</button>
       
     </form>

@@ -13,3 +13,5 @@ const userDetailsSchema = new mongoose.Schema(
 )
 
 mongoose.model("ContactUs", userDetailsSchema)
+
+

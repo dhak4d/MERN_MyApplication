@@ -1,2 +1,5 @@
 # dependencies
 /node_modules
+
+
+# "mongodb+srv://mango:mango@cluster0.sz4n2kr.mongodb.net/?retryWrites=true&w=majority"
