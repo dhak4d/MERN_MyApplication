@@ -10,6 +10,7 @@ function ContactUs() {
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
   const [messageError, setMessageError] = useState('');
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -64,10 +65,9 @@ function ContactUs() {
         .then((res) => res.json())
         .then((data) => {
           if (data.status === 'ok') {
-            alert('Contact details successful saved');
+          alert("Contact details successful saved");
           } else {
-            console.log(data);
-            alert('Something went wrong with BContactUs');
+          alert("Something went wrong with BContactUs");
           }
           window.location.reload();
         });
@@ -77,6 +77,7 @@ function ContactUs() {
   return (
     <>
       <div className='form-container'>
+      <h1 style={{color:'white' }}>Contact Us</h1>
       <form className="form" onSubmit={handleSubmit}>
           <h3 style={{ textAlign: 'center', color:'black' }}>GET IN TOUCH</h3>
         
@@ -106,7 +107,7 @@ function ContactUs() {
           </div>
        
           <div>
-          <input type='submit' value='Send'/>
+          <input type='submit' className="form-btn" value='Send ➟'/>
          </div>
       
     </form>

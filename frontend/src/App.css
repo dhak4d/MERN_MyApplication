@@ -53,7 +53,8 @@
   height: 50px;
   font-size: large;
   font-weight: bold;
-  background-color: #d9d9d9;
+  background-color: #fcfcfc;
+  background-image: linear-gradient(rgb(24, 24, 24), rgb(160, 20, 123)); 
   border-radius: 5px;
 }
 .nav-item{
@@ -65,13 +66,13 @@
 .navlink{
   text-decoration: none;
   font-size: large;
+  color: white;
   /* box-shadow: 3px 3px 3px 3px rgba(0, 0, 0,6); */
 }
 
 .navlink:hover{
-  color: rgb(88, 26, 88);
-  border-bottom: 3px solid maroon;
-  
+  color: rgb(29, 105, 219);
+  border-bottom: 3px solid rgb(29, 105, 219);
 }
 
 .nav-item Link.active{
@@ -85,10 +86,10 @@
   justify-content: center;
   align-items: center;
   background: url("D:\Mango Workspace\Capston_Project\frontend\src\Images\bg.jpg") no-repeat center center/cover;
-  /* opacity: 0.9; */
-  height: 90vh;
+  height: 75vh;
   margin-top: 7%;
-
+  opacity: 9.7;
+ overflow-y: hidden;
 }
 
 .form{
@@ -96,11 +97,11 @@
   display: flex;
   flex-direction: column;
   width: 25%;
+  margin-left: 20%;
   padding: 20px;
   background:white;
   color: white;
-  border-radius: 10px;
-  
+  border-radius: 10px;  
 }
 
 .form .inputBox{
@@ -108,13 +109,13 @@
   width: 100%;
   margin-top: 10px;
   color: black;
-  /* padding: 10px; */
+ 
 }
 
 .form .inputBox input, textarea{
   width: 100%;
   padding: 5px 0;
-  font-size: 12px;
+  font-size: 14px;
   margin: 10px 0;
   border: none;
   border-bottom: 1px solid rgb(0, 0, 0);
@@ -126,7 +127,7 @@
   position: absolute;
   left: 0;
   margin: 10px 0;
-  padding: 5px 0;
+  padding: 3px 0;
   font-size: 16px;
   pointer-events: none;
   transition: 0.5s;
@@ -137,9 +138,24 @@
 .form .inputBox input:valid ~ span,
 .form .inputBox textarea:focus ~ span,
 .form .inputBox textarea:valid ~ span{
-  color: rgb(241, 133, 26);
+  color: rgb(232, 126, 21);
   font-size: 14px;
   transform: translateY(-20px);
+}
+
+.form-btn{
+  border: 1px solid black;
+  font-size: 16px;
+  /* background-image: linear-gradient(black, grey); */
+  background-color: black;
+  border-radius: 3px;
+  width: 100px;
+  height: 30px;
+  padding: 3px;
+  /* box-shadow: 3px 3px  rgb(48, 51, 53); */
+  margin-left: 70%;
+  color: white;
+  font-variant: small-caps;
 }
 
 
@@ -153,9 +169,8 @@
 .home-page{
   display: flex;
   background-color: black;
-  margin-top: 7%;
-  
- 
+  margin-top: 7%; 
+  width: 100%;
 }
 
 .img{
@@ -190,10 +205,9 @@
   background-color: rgb(243, 9, 48);
   border: 1px solid rgb(243, 9, 48);
   font-size:smaller;
-  
   margin: 10px 10px 10px 0;
-
 }
+
 .btn2{
   width: 100px;
   height: 100px;
@@ -201,7 +215,6 @@
   background-color: rgb(84, 138, 22);
   border: 1px solid rgb(84, 138, 22);
   font-size:smaller;
- 
   margin: 10px;
 }
 .btn3{
@@ -211,7 +224,6 @@
   background-color: rgb(7, 111, 237);
   border: 1px solid rgb(7, 111, 237);
   font-size:smaller;
- 
   margin: 10px;
 }
 
@@ -221,7 +233,6 @@
 }
 
 .aboutme{
-  
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
@@ -229,6 +240,7 @@
   font-size: small;
   padding: 10px 80px 10px 0;
   text-align: justify;
+  
 }
 .para ul{
   list-style: none;

@@ -6,6 +6,7 @@ import { Routes, Route} from 'react-router-dom';
 import Home from './Components/Home';
 // import GetDetails from './Components/GetDetails';
 import Projects from './Components/Projects';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/contact" element={<ContactUs/>} />
         <Route path="*" element={<div>Error Occurred</div>} />
       </Routes>
+      <Footer />
   </React.Fragment> 
   );
 }

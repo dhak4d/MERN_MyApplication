@@ -29,7 +29,7 @@ export default function Home() {
           <p className='heading2'>a bit about me:</p>
 
           <div className='Button'>
-            <button className='btn1'><Link to='#' className='btn-l'>MY RESUME</Link></button>
+            <button className='btn1'><Link to='https://flowcv.com/resume/stso1hv6is' className='btn-l'>MY RESUME</Link></button>
             <button className='btn2'><Link to='/projects' className='btn-l'>MY WORK</Link></button>
             <button className='btn3'><Link to='#' className='btn-l'>MY SKILLS</Link></button>
           </div>
