@@ -7,7 +7,7 @@ export default function Home() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/getAboutMe", {
+    fetch("http://localhost:5000/B_GetAboutMe", {
       method: "GET",
     })
       .then((res) => res.json())
@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <>
-      <div className='about'>
+      <div className='home-page'>
         <div className='image'>
           <img src={owner} alt="Profile1" className='img' />
         </div>
@@ -30,7 +30,7 @@ export default function Home() {
 
           <div className='Button'>
             <button className='btn1'><Link to='#' className='btn-l'>MY RESUME</Link></button>
-            <button className='btn2'><Link to='#' className='btn-l'>MY WORK</Link></button>
+            <button className='btn2'><Link to='/projects' className='btn-l'>MY WORK</Link></button>
             <button className='btn3'><Link to='#' className='btn-l'>MY SKILLS</Link></button>
           </div>
 

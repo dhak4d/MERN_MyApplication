@@ -4,7 +4,7 @@ import { useState } from 'react';
 export default function GetDetails() {
     const [data, setData] = useState([]);
     const getAllUser = () => {
-        fetch("http://localhost:5000/getAllUser", {
+        fetch("http://localhost:5000/B_GetAllContactUs", {
           method: "GET",
         })
           .then((res) => res.json())

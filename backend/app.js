@@ -7,7 +7,7 @@ app.use(cors());
 app.use(express.json()); 
 
 const mongoose = require("mongoose")
-const mongoUrl = 
+const mongoUrl = "mongodb+srv://mango:mango@cluster0.sz4n2kr.mongodb.net/?retryWrites=true&w=majority"
 
 
 mongoose.connect(mongoUrl, {
@@ -26,7 +26,7 @@ require("./aboutMe")
 const about = mongoose.model("AboutMe")
 
 
-app.post("/register", async (req, res) => {
+app.post("/B_ContactUs", async (req, res) => {
     const { name, email, phone, message } = req.body;
     try{
         await user.create({
@@ -44,39 +44,26 @@ app.post("/register", async (req, res) => {
 });
 
 
-app.get("/getAllUser", async(req, res)=>{
+app.get("/B_GetAllContactUs", async(req, res)=>{
     try{
-      const allUser = await user.find({})
-      res.send({status:"ok", data: allUser})
-      console.log(allUser)
+      const registers = await user.find({})
+      res.send({status:"ok", data: registers})
+      console.log(registers)
     }catch(error){
       console.log(error)
     }
   })
 
-  app.get("/getAboutMe", async(req, res)=>{
+  app.get("/B_GetAboutMe", async(req, res)=>{
     try{
       const version = 'latest';
-      const allUser1 = await about.find({version})
-      res.send({status:"ok", data: allUser1})
-      console.log(allUser1)
+      const pare = await about.find({version})
+      res.send({status:"ok", data: pare})
+      console.log(pare)
     }catch(error){
       console.log(error)
     }
   })
-
-  // app.get("/getAboutMe", async(req, res)=>{
-  //   try{
-  //      const version = 'latest'
-  //      const myData = await about.find({version})
-  //      res.send({data:myData})
-  //     //  res.json(myData)
-  //      console.log(myData)
-  //   }catch(error){
-  //     console.log(error)
-  //   }
-  // })
-
 
 app.listen(5000, () => {
     console.log("Server Started")

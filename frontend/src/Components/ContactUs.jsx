@@ -9,7 +9,7 @@ function ContactUs() {
   const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('');
   const [phoneError, setPhoneError] = useState('');
-  // const [messageError, setMessageError] = useState('');
+  const [messageError, setMessageError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +17,7 @@ function ContactUs() {
     let isValid = true;
 
     // Validate name
-    if (e.target.name<3) {
+    if (e.target.value<3) {
       setNameError('Please enter your valid name');
       isValid = false;
     } else {
@@ -41,17 +41,17 @@ function ContactUs() {
     }
 
     // Validate message
-    // if (!message.trim()) {
-    //   setMessageError('Please enter a message');
-    //   isValid = false;
-    // } else {
-    //   setMessageError('');
-    // }
+    if (!message.trim()) {
+      setMessageError('Please enter a message');
+      isValid = false;
+    } else {
+      setMessageError('');
+    }
 
     // Submit the form
     if (isValid) {
       console.log(name, email, phone, message);
-      fetch('http://localhost:5000/register', {
+      fetch('http://localhost:5000/B_ContactUs', {
         method: 'POST',
         crossDomain: true,
         headers: {
@@ -63,12 +63,11 @@ function ContactUs() {
       })
         .then((res) => res.json())
         .then((data) => {
-          console.log(data, 'userRegister');
           if (data.status === 'ok') {
-            alert('Registration Successful');
+            alert('Contact details successful saved');
           } else {
             console.log(data);
-            alert('Something went wrong');
+            alert('Something went wrong with BContactUs');
           }
           window.location.reload();
         });
@@ -77,28 +76,41 @@ function ContactUs() {
 
   return (
     <>
-      <h3 style={{ textAlign: 'center' }}>Contact Us</h3>
+      <div className='form-container'>
       <form className="form" onSubmit={handleSubmit}>
-       
-          <label className="form-label">Name:</label>
-          <input type="text" className="form-input" value={name} onChange={(e) => setName(e.target.value)}/>
-          {nameError && <div className="error">{nameError}</div>}
+          <h3 style={{ textAlign: 'center', color:'black' }}>GET IN TOUCH</h3>
         
-          <label className="form-label">Email:</label>
-          <input type="email" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)}/>
+          <div className='inputBox'>
+          <input type="text" className="form-input" value={name} onChange={(e) => setName(e.target.value)} required/>
+          <span>Name</span>
+          {nameError && <div className="error">{nameError}</div>}
+          </div>
+        
+          <div className='inputBox'>
+          <input type="email" className="form-input" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+          <span>Email</span>
           {emailError && <div className="error">{emailError}</div>}
+          </div>
       
-          <label className="form-label">Phone Number: </label>
-          <input type="number" className="form-input" value={phone} onChange={(e) => setPhone(e.target.value)}/>
+          <div className='inputBox'>
+          <input type="number" className="form-input" value={phone} onChange={(e) => setPhone(e.target.value)} required/>
+          <span>Phone Number</span>
           {phoneError && <div className="error">{phoneError}</div>}
-      
-          <label className="form-label">Message:</label>
-          <textarea className="form-input" value={message} onChange={(e) => setMessage(e.target.value)}/>
-          {/* {messageError && <div className="error">{messageError}</div>} */}
+          </div>
+
+          
+          <div className='inputBox'>
+          <textarea className="form-input" value={message} onChange={(e) => setMessage(e.target.value)} required/>
+          <span>Message</span>
+          {messageError && <div className="error">{messageError}</div>}
+          </div>
        
-        <button className='submit' type="submit">Submit</button>
+          <div>
+          <input type='submit' value='Send'/>
+         </div>
       
     </form>
+    </div> 
     </>
   );
 }
