@@ -1,0 +1,84 @@
+.home-page{
+    display: flex;
+    background-color: black;
+    margin-top: 7%; 
+    width: 100%;
+    
+  }
+  
+  .img{
+    border-radius: 400px;
+    width: 250px;
+    height: 300px;
+    margin: 50px 50px 50px 200px;
+  }
+  
+  .heading{
+    color: white;
+    margin: 50px;
+    font-family: 'LilyUPC'; 
+  }
+  .heading1{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'LilyUPC';
+  }
+  
+  .heading2{
+    color: white;
+    font-size: 25px; 
+    font-family: 'LilyUPC'; 
+  }
+  
+  .button{
+   margin: 10px;
+   
+  }
+  .btn1{
+    width: 100px;
+    height: 100px;
+    border-radius: 400px;
+    background-color: rgb(243, 9, 48);
+    border: 1px solid rgb(243, 9, 48);
+    font-size:smaller;
+    margin: 10px 10px 10px 0;
+    font-family: 'Copperplate';
+  }
+  
+  .btn2{
+    width: 100px;
+    height: 100px;
+    border-radius: 400px;
+    background-color: rgb(84, 138, 22);
+    border: 1px solid rgb(84, 138, 22);
+    font-size:smaller;
+    margin: 10px;
+    font-family: 'Copperplate';
+  }
+  .btn3{
+    width: 100px;
+    height: 100px;
+    border-radius: 400px;
+    background-color: rgb(7, 111, 237);
+    border: 1px solid rgb(7, 111, 237);
+    font-size:smaller;
+    margin: 10px;
+    font-family: 'Copperplate';
+  }
+  
+  .btn-l{
+    text-decoration: none;
+    color: white;
+  }
+  
+  .para{
+    font-size: 16px;
+    padding: 10px 80px 10px 0;
+    text-align: justify;
+    line-height:1.2em;
+    
+  }
+  .para ul{
+    list-style: none;
+  }

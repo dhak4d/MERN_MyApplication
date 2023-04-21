@@ -1,4 +1,5 @@
 import React from 'react'
+import './Home.css';
 import owner from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/owner.png'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';

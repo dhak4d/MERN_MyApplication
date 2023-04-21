@@ -1,0 +1,180 @@
+
+ .p1 {
+    text-align: center;
+    font-size: 25px;
+    color: pink;
+    padding: 5px;
+    font-family: 'papyrus';
+}
+.p2{
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Segoe Script';
+    color: white;
+    /* padding: 3px; */
+}
+.contactUs-base hr{
+    width: 75%;
+    margin-left: 15%;
+    opacity: 0.6;
+}
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: 10%;
+    right: 0;
+    background: url("D:\Mango Workspace\Capston_Project\frontend\src\Images\bg.jpg") no-repeat center center/cover;
+    filter: blur(3px);
+    -webkit-filter: blur(2px);
+    height: 100vh; 
+    width: 100%;
+    z-index: -1; 
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    
+}
+
+.contact-col{
+     display: flex;
+     flex-direction: column;
+     margin-left: 8%;
+} 
+
+.icon{
+    color: pink;
+    margin-left: 5px;
+
+}
+.m-col{
+    margin: 10px;
+}
+
+.m-col p{
+    margin-left: 32px;
+    color: white;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin-bottom: 2%;
+    padding: 20px; 
+    background: white;
+    color: white;
+    border-radius: 10px;
+   
+}
+
+
+.form .inputBox {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    color: black;
+}
+
+.form .inputBox input,textarea {
+    width: 100%;
+    padding: 5px 0;
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    outline: none;
+    resize: none;
+}
+
+.form .inputBox span {
+    position: absolute;
+    left: 0;
+    margin: 10px 0;
+    padding: 3px 0;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #424040;
+}
+
+.form .inputBox input:focus~span,
+.form .inputBox input:valid~span,
+.form .inputBox textarea:focus~span,
+.form .inputBox textarea:valid~span {
+    color: rgb(232, 126, 21);
+    font-size: 14px;
+    transform: translateY(-20px);
+}
+
+.form-btn {
+    border: 1px solid black;
+    font-size: 16px;
+    background-color: black;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    padding: 3px;
+    margin-left: 70%;
+    color: white;
+    font-variant: small-caps;
+}
+
+.error {
+    color: red;
+    margin-left: 10px;
+    font-size: smaller;
+}
+
+
+/* Mobile Device Responsive */
+  @media (max-width:768px){
+    .form-container::before {
+        width: 100%;
+    }
+    .form-container{
+        display: block;
+       
+    }
+    .contact-col{
+        margin-top: 5%;
+        margin-left: 8%;
+    }
+    
+    .icon{
+        font-size: 18px;
+    }
+    .m-col-p{
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .form{
+     margin-top: 5%;
+     text-align: center;
+     margin-left: 10%; 
+     width: 80%;
+     height: auto;
+
+    }
+    .contactUs-base hr{
+        margin-left: 55px;
+    }
+    .p1{
+        font-size: 14px;
+        font-family: 'Segoe Script';
+    }
+    .p2{
+        font-size: 14px;
+        font-family: 'papyrus';
+    }
+    .form-btn{
+        margin-top: 25px;
+        margin-left: 74%;
+        height: 40px;
+    }
+}
