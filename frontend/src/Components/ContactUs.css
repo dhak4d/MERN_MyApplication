@@ -1,4 +1,11 @@
-
+body{
+    background-color: black;
+}
+.contactUs-base hr{
+    width: 75%;
+    margin-left: 15%;
+    opacity: 0.6;
+}
  .p1 {
     text-align: center;
     font-size: 25px;
@@ -13,11 +20,7 @@
     color: white;
     /* padding: 3px; */
 }
-.contactUs-base hr{
-    width: 75%;
-    margin-left: 15%;
-    opacity: 0.6;
-}
+
 
 .form-container::before {
     content: "";
@@ -25,7 +28,7 @@
     top: 10%;
     right: 0;
     background: url("D:\Mango Workspace\Capston_Project\frontend\src\Images\bg.jpg") no-repeat center center/cover;
-    filter: blur(3px);
+     filter: blur(3px);
     -webkit-filter: blur(2px);
     height: 100vh; 
     width: 100%;
@@ -37,28 +40,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    height: 70vh;
-    
-}
-
-.contact-col{
-     display: flex;
-     flex-direction: column;
-     margin-left: 8%;
-} 
-
-.icon{
-    color: pink;
-    margin-left: 5px;
-
-}
-.m-col{
-    margin: 10px;
-}
-
-.m-col p{
-    margin-left: 32px;
-    color: white;
+    height: 70vh;   
 }
 .form {
     display: flex;
@@ -69,9 +51,7 @@
     background: white;
     color: white;
     border-radius: 10px;
-   
 }
-
 
 .form .inputBox {
     position: relative;
@@ -129,6 +109,30 @@
     margin-left: 10px;
     font-size: smaller;
 }
+
+.contact-col{
+     display: flex;
+     flex-direction: column;
+     margin-left: 8%;
+} 
+
+.icon{
+    color: pink;
+    margin-left: 5px;
+
+}
+.m-col{
+    margin: 10px;
+}
+
+.m-col p{
+    margin-left: 32px;
+    color: white;
+}
+
+
+
+
 
 
 /* Mobile Device Responsive */

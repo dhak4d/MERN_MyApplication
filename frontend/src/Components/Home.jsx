@@ -24,9 +24,11 @@ export default function Home() {
       <div className='home-page'>
         <div className='image'>
           <img src={owner} alt="Profile1" className='img' />
+          <h2 className='owner-name'>Mangla Nagar</h2>
         </div>
 
-        <div className='heading'><h1 className='heading1'>Hello,</h1>
+        <div className='heading'>
+          <h1 className='heading1'>Hello,</h1>
           <p className='heading2'>a bit about me:</p>
 
           <div className='Button'>
