@@ -13,7 +13,7 @@
     height: 50px;
     font-size: large;
     font-weight: bold;
-    background-color: #fcfcfc;
+    /* background-color: #fcfcfc; */
     background-image: linear-gradient(rgb(24, 24, 24), rgb(160, 20, 123)); 
     flex-wrap: wrap;
     border-radius: 5px;

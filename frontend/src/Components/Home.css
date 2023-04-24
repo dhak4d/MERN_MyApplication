@@ -3,6 +3,7 @@
     background-color: black;
     margin-top: 5%; 
     width: 100%; 
+    z-index: -1;
     /* margin-bottom: 5%;  */
   }
   
@@ -105,14 +106,18 @@
       font-size: 35px;
     }
    .heading{
-    margin-top: 5px;
+    margin-top: 15px;
    }
+  
     .img{
     display: block;
     margin-top: 25%;
     margin-left: 15%;
     }
 
+    .image h2{
+      margin-left: 12%;
+    }
     .button{
       display:flex;
       flex-direction: column; 

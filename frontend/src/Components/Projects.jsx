@@ -7,19 +7,20 @@ import { Link } from 'react-router-dom'
 export default function Projects() {
   return (
     <>
+    <div className='project-total-box'>
       <div className='project-up-box'>
         <div className='project-box'>
-          <div><img src={project} /></div>
+          <div><img src={project} alt='NoImage' /></div>
           <div className='all'>
-            <h3>PortFolio Website</h3>
-            <h1>SkillSetMe Portfolio Website</h1>
+            <h4>PortFolio Website</h4>
+            <h2>SkillSetMe Portfolio Website</h2>
             <p>Developed my own Portfolio using MERN technology -</p>
             <ul>
               <li>Designed beautiful UI with the help of frontend technologies JSX, ReactJs</li>
               <li>Developed backend using ExpressJs, NodeJs for interacting frontend and backend</li>
               <li>Created database and collection on MongoDB atlas and stablish connection between database to backend.</li></ul>
             <div className='project-link'>
-              <img src={github} />
+              <img src={github}  alt='NoImage'/>
               <button type='button' className='project-btn'><Link to='https://github.com/dhak4d/MERN_MyApplication' className='project-btn-Link'>Visit Project</Link></button>
             </div>
           </div>
@@ -28,25 +29,25 @@ export default function Projects() {
 
       <div className='project-down-box1'>
         <div className='project-down-box'>
-          <div><img src={project} /> </div> 
+          <div><img src={project} alt='NoImage' /> </div> 
           <h4>Ecomm Website</h4>
-          <h2>Ecommerce Website</h2>
+          <h3>Ecommerce Website</h3>
           <div className='project-down-div'><Link to='https://github.com/dhak4d/E-comm_with_Js' className='project-down-Link'>Visit</Link>
-          <img src={github} />
+          <img src={github} alt='NoImage' />
           </div>
         </div>
        
         <div className='project-down-box'>
-          <div><img src={project} />
+          <div><img src={project} alt='NoImage' />
           <h4>Charts_Visuals</h4>
-          <h2>Charts Visualization</h2>
+          <h3>Charts Visualization</h3>
           <div className='project-down-div'><Link to='https://github.com/dhak4d/Chart_Visuals' className='project-down-Link'>Visit</Link>
-          <img src={github} />
+          <img src={github} alt='NoImage' />
           </div>
         </div> 
         </div>
         </div>
-
+        </div>
     </>
   )
 }
