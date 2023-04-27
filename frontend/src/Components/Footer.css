@@ -5,11 +5,11 @@
  }
  
  .footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0px;
     left: 0px;
-    right: 0px;
-    margin-bottom: 0px;
+    right: 0px; 
+    /* margin-bottom: 0px; */
     background-image: linear-gradient(rgb(228, 97, 176), rgb(110, 34, 92)); 
     /* background-color: rgb(171, 219, 245); */
     text-align: center;
@@ -26,3 +26,12 @@
 .copyright{
     padding-bottom: 10px;
 } 
+
+@media (max-width:768px){
+    /* .footer {
+    
+        bottom: 0px;
+        left: 0px;
+        right: 0px; 
+    } */
+}

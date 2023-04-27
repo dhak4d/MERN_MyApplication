@@ -6,10 +6,10 @@
 
 .project-total-box{
     width: 100%;
+    margin: 20px auto; 
+   
 }
 .project-up-box {
-    /* width: 70%;
-    height: 50%; */
     margin: 100px 100px 50px 100px;
     border: 5px solid rgb(222, 222, 222);
     border-width: 1px 15px 15px 1px;
@@ -123,6 +123,7 @@ ul {
 
 
 @media (max-width:768px) {
+    
     .project-up-box {
         width:90%;
         margin: 100px 15px 15px 20px ; 
@@ -133,8 +134,8 @@ ul {
     }
 
     .project-box img {
-        width: 330px;
-        height: 150px;
+        width: 320px;
+        height: 200px;
         margin: 15px 20px 5px 20px;
         border-radius: 10px;
     }

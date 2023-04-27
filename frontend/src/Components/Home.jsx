@@ -39,6 +39,12 @@ export default function Home() {
 
           <div className='about-me'>
             <div className='para'>
+              
+              {/* <p>I'm a MERN full-stack developer with over a year of experience.
+              I'm possess expertise in the MERN technology stack, consisting of MongoDB, Express.js, React.js, and Node.js.
+              Having a comprehensive understanding of both front-end and back-end development, and can develop robust and scalable web applications.
+              My skill set includes proficiency in JavaScript, HTML, CSS, and other relevant programming languages.</p> */}
+
               {(data.length !== 0) && <ul>
                 {data.map((res) => {
                   return <li>

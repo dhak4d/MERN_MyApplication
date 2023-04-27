@@ -1,6 +1,8 @@
 import React from 'react'
 import './Projects.css'
-import project from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/project.png'
+import skillSetMe from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/skillSetMe.png'
+import dataVisual from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/dataVisual.png'
+import eCom from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/eCom.png'
 import github from 'D:/Mango Workspace/Capston_Project/frontend/src/Images/github.svg'
 import { Link } from 'react-router-dom'
 
@@ -10,7 +12,7 @@ export default function Projects() {
     <div className='project-total-box'>
       <div className='project-up-box'>
         <div className='project-box'>
-          <div><img src={project} alt='NoImage' /></div>
+          <div><img src={skillSetMe} alt='NoImage' /></div>
           <div className='all'>
             <h4>PortFolio Website</h4>
             <h2>SkillSetMe Portfolio Website</h2>
@@ -29,7 +31,7 @@ export default function Projects() {
 
       <div className='project-down-box1'>
         <div className='project-down-box'>
-          <div><img src={project} alt='NoImage' /> </div> 
+          <div><img src={eCom} alt='NoImage' /> </div> 
           <h4>Ecomm Website</h4>
           <h3>Ecommerce Website</h3>
           <div className='project-down-div'><Link to='https://github.com/dhak4d/E-comm_with_Js' className='project-down-Link'>Visit</Link>
@@ -38,7 +40,7 @@ export default function Projects() {
         </div>
        
         <div className='project-down-box'>
-          <div><img src={project} alt='NoImage' />
+          <div><img src={dataVisual} alt='NoImage' />
           <h4>Charts_Visuals</h4>
           <h3>Charts Visualization</h3>
           <div className='project-down-div'><Link to='https://github.com/dhak4d/Chart_Visuals' className='project-down-Link'>Visit</Link>
